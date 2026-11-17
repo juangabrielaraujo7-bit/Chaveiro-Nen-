@@ -1,0 +1,92 @@
+import Image from "next/image";
+import { WhatsAppIcon } from "./whatsapp-icon";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { company, services } from "@/lib/content";
+import { PrivacySettings } from "./analytics";
+export function Footer() {
+  return (
+    <>
+      <footer className="site-footer">
+        <div className="container footer-grid">
+          <div>
+            <Image
+              src="/brand/logo-horizontal-marfim-web.svg"
+              width={240}
+              height={86}
+              alt="Chaveiro Nenê — Freguesia do Ó"
+            />
+            <p>
+              Chaves, acesso e cuidado
+              <br />
+              com o que faz parte da sua vida.
+            </p>
+          </div>
+          <div>
+            <h3>Serviços</h3>
+            {services.map((s) => (
+              <Link href={`/${s.slug}`} key={s.slug}>
+                {s.name}
+              </Link>
+            ))}
+          </div>
+          <div>
+            <h3>Encontre o Chaveiro Nenê</h3>
+            <p>
+              {company.address}
+              <br />
+              {company.district} · São Paulo, SP
+              <br />
+              CEP {company.zip}
+            </p>
+            <a
+              href={company.tel}
+              data-conversion="phone_click"
+              data-source="footer"
+            >
+              {company.phone}
+            </a>
+            <a
+              href={company.maps}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-conversion="maps_click"
+              data-source="footer"
+            >
+              Como chegar <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+            <Link href="/regioes-atendidas">Regiões atendidas</Link>
+            <Link href="/orientacoes">Orientações úteis</Link>
+          </div>
+        </div>
+        <div className="container footer-bottom">
+          <span>
+            © {new Date().getFullYear()} Chaveiro Nenê - Freguesia do Ó
+          </span>
+          <div>
+            <Link href="/privacidade">Privacidade</Link>
+            {process.env.NEXT_PUBLIC_GA_ID && <PrivacySettings />}
+          </div>
+        </div>
+      </footer>
+      <div className="mobile-contact">
+        <a
+          href={company.tel}
+          data-conversion="phone_click"
+          data-source="mobile_fixed"
+        >
+          Ligar agora
+        </a>
+        <a
+          href={`https://wa.me/${company.whatsapp}?text=${encodeURIComponent("Olá, encontrei o Chaveiro Nenê pelo site e gostaria de um atendimento.")}`}
+          className="whatsapp-button"
+          data-conversion="whatsapp_click"
+          data-source="mobile_fixed"
+        >
+          <WhatsAppIcon size={19} aria-hidden="true" />
+          WhatsApp
+        </a>
+      </div>
+    </>
+  );
+}
