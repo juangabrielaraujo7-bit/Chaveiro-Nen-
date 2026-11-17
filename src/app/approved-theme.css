@@ -238,16 +238,29 @@ a.whatsapp-button .whatsapp-icon {
   color: #ffdf00;
 }
 .concept-person {
+  position: relative;
+  isolation: isolate;
   width: min(301px, 90%);
   justify-self: center;
   margin: 20px 0 55px;
+}
+.concept-person::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 130%;
+  aspect-ratio: 1;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #ffdf00;
 }
 .concept-person > img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 22px;
-  box-shadow: 10px 10px 0 #ffdf00;
+  position: relative;
 }
 .concept-services {
   padding: 65px 0 90px;
