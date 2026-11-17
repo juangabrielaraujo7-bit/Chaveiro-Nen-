@@ -55,13 +55,12 @@ export default function ApprovedHome() {
             </div>
           </div>
           <div className="concept-person">
-            <span className="person-circle" />
             <Image
-              src="/images/approved/hero-professional.webp"
-              alt="Imagem ilustrativa de um chaveiro, gerada por IA"
-              width={800}
-              height={1000}
-              sizes="(max-width:640px) 90vw, 480px"
+              src="/images/approved/nene-na-loja.png"
+              alt="Nenê sorrindo e segurando chaves automotivas"
+              width={301}
+              height={407}
+              unoptimized
               priority
             />
           </div>
@@ -163,18 +162,15 @@ export default function ApprovedHome() {
               <ArrowRight size={16} />
             </Link>
           </div>
-          <figure className="about-portrait">
-            <div className="about-portrait-circle">
-              <Image
-                src="/images/approved/about-professional.webp"
-                alt="Retrato de profissional ilustrativo, gerado por IA"
-                width={800}
-                height={800}
-                sizes="(max-width:640px) 80vw, 360px"
-              />
-            </div>
-            <figcaption>Profissional ilustrativo</figcaption>
-          </figure>
+          <div className="about-portrait-circle">
+            <Image
+              src="/images/approved/nene-no-carro.png"
+              alt="Nenê usando a camiseta do Chaveiro Nenê"
+              width={356}
+              height={727}
+              sizes="(max-width:640px) 270px, (max-width:900px) 290px, 340px"
+            />
+          </div>
         </div>
         <Wave fill="#f7f7f7" />
       </section>
