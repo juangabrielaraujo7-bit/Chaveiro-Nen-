@@ -56,10 +56,10 @@ export default function ApprovedHome() {
           </div>
           <div className="concept-person">
             <Image
-              src="/images/approved/nene-na-loja.png"
-              alt="Nenê sorrindo e segurando chaves automotivas"
-              width={301}
-              height={407}
+              src="/images/approved/nene-polo-hero.png"
+              alt="Nenê de camisa polo segurando uma fechadura"
+              width={1060}
+              height={1478}
               unoptimized
               priority
             />
@@ -164,10 +164,10 @@ export default function ApprovedHome() {
           </div>
           <div className="about-portrait-circle">
             <Image
-              src="/images/approved/nene-no-carro.png"
-              alt="Nenê usando a camiseta do Chaveiro Nenê"
-              width={356}
-              height={727}
+              src="/images/approved/nene-polo-sobre.png"
+              alt="Nenê de camisa polo e óculos segurando um cilindro"
+              width={1060}
+              height={1478}
               sizes="(max-width:640px) 270px, (max-width:900px) 290px, 340px"
             />
           </div>
